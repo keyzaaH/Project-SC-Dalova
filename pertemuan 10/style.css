@@ -1,0 +1,33 @@
+body {
+  background-color: lightpink;
+}
+
+
+/* === Membuat gambar produk seragam === */
+.card-img-top {
+  width: 100%;          /* pastikan lebar gambar mengikuti lebar kartu */
+  height: 300px;        /* ubah angka ini sesuai tinggi yang kamu mau */
+  object-fit: cover;    /* agar gambar tidak ketarik dan tetap proporsional */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Tambahan biar kartu lebih menarik */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Responsif: di layar kecil tinggi gambar sedikit dikurangi */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 220px;
+  }
+}

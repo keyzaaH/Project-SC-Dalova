@@ -1,0 +1,66 @@
+<ul>
+    <li>Badminton</li>
+    <li>Basket</li>
+    <li>Volly</li>
+    <li>Futsal</li>
+    <li>Karate</li>
+</ul>
+
+<h2>Langkah-langkah Pendaftaran Ekstrakurikuler</h2>
+<ol>
+
+<li>Buka link</li>
+<li>Login</li>
+<li>Pilih Esktrakurikuler</li>
+<li>Isi Formulir</li>
+<li>Selesai</li>
+
+
+<table border="1">
+            <tr>
+                <th>Nama Kegiatan</th>
+                <th>Hari</th>
+                <th>Waktu</th>
+            </tr>
+            <tr>
+                <td>Badminton</td>
+                <td>Selasa</td>
+                <td>15.00-16.00</td>
+            </tr>
+            <tr>
+                <td>Basket</td>
+                <td>Rabu</td>
+                <td>14.00-15.00</td>
+            </tr>
+            <tr>
+                <td>Volly</td>
+                <td>Kamis</td>
+                <td>16.00-17.00</td>
+            </tr>
+        </table>
+
+
+    <h2>Form Pendaftaran</h2>
+    <form action="">
+        <label for="nama">Nama Siswa :</label><br>
+        <input type="text" name="nama"><br>
+        <label for="nis">Kelas:</label><br>
+        <input type="text" name="nis"><br>
+
+
+        <form action="proses.php" method="post">
+            Nama: <input type="text" name="nama"><br>
+            NIS: <input type="NIS" name="NIS"><br>
+            
+            Hari:
+            <input type="radio" name="hari" value="Selasa"> Selasa
+            <input type="radio" name="hari" value="Rabu"> Rabu
+            <input type="radio" name="hari" value="Kamis"> Kamis <br>
+           Kegiatan:
+            <select name="Kegiatan">
+                <option value="Badminton">Badminton</option>
+                <option value="Basket">Basket</option>
+                <option value="Volly">Volly</option>
+            <select><br>
+            <button type="submit">Kirim</button>
+    </form>

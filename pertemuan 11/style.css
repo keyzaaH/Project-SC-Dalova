@@ -1,0 +1,23 @@
+body {
+  background-color: #ff00ffde;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  color: #000000;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-control,
+.form-select,
+textarea {
+  border-radius: 10px;
+}
+
+
+button {
+  border-radius: 10px;
+}

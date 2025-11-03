@@ -1,0 +1,55 @@
+body {
+  background-color: #ffb6c1;
+  color: #555555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #555555; /* warna oranye */
+  margin-bottom: 2rem;
+}
+
+.foto-profile {
+  max-width: 250px;
+  width: 100%;
+  height: 250px;
+  border-radius: 50%; /* Membuat foto bulat */
+  object-fit: cover;  /* Memastikan proporsional */
+  border: 4px solid #ff00f7bc;
+  box-shadow: 0 0 10px #ff00aa;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.foto-profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff0481;
+}
+
+.desc {
+  color: #0080ff;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: 1px solid #000000;
+  color: #d900ff;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive: tampilan jadi 1 kolom di layar kecil */
+@media (max-width: 575.98px) {
+  .foto-profile {
+    height: auto;
+    max-width: 150px;
+  }
+  .desc {
+    font-size: 1rem;
+  }
+}

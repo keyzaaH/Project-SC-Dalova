@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Box Model</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h2>Contoh Box Model</h2>
+
+    <div class="box-example">
+        Konten Kotak 1
+    </div>
+
+    <div class="box-example">
+        Konten Kotak 2
+    </div>
+
+    <h3>Dengan Parent Box</h3>
+    <div class="box-parent">
+        <div class="box-example">
+            Kotak dalam Parent
+        </div>
+    </div>
+
+    <div class="static-box">Kotak Static1</div>
+    <div class="static-box">Kotak Static2</div>
+    <p>Ini adalah paragraf setelah kotak static.</p>
+
+    <div class="relative-box">Kotak Relative</div>
+    <div class="another-box">Kotak Lain (Normal Flow)</div>
+
+    <div class="parent-box">
+        Ini adalah Parent Box (position: relative)
+        <div class="absolute-child">Child Absolute</div>
+        <div class="normal-sibling">Sibling Normal</div>
+    </div>
+    <p>Paragraf di luar Parent Box.</p>
+
+    <div class="fixed-header">Ini adalah Header yang Fixed</div>
+
+    <div class="scroll-content">
+        <p>Gulir ke bawah untuk melihat header tetap di tempatnya.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        <p>...</p>
+        <p>Akhir konten.</p>
+    </div>
+</body>
+
+</html>
