@@ -1,0 +1,365 @@
+/*
+ * style.css (Disesuaikan untuk Dark Mode - Hitam & Hijau Neon)
+ * Menggabungkan Tema NCT Fansite dengan Gaya Futuristis.
+ */
+
+/* --- Variabel Warna --- */
+:root {
+    --neon-green: #39ff14; /* Define variabel warna untuk kemudahan */
+}
+
+/* --- General & Typography --- */
+body {
+    background-color: #0a0a0a; /* Latar belakang Hitam Pekat */
+    color: #ffffff; /* Teks default Putih */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font modern */
+}
+
+/* Memastikan semua teks di body berwarna putih kecuali ditentukan lain */
+main, section, div {
+    color: #ffffff;
+}
+
+/* Gaya Neon untuk Teks */
+.neon-text {
+    color: var(--neon-green) !important;
+    text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green); /* Efek neon */
+    font-weight: bold;
+}
+
+/* Judul */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+/* Garis Pembatas (HR) */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--neon-green); /* Garis hijau neon */
+    margin: 3rem 0;
+}
+
+/* --- Navbar (Navigasi) --- */
+/* Ikon Garis Tiga (Hamburger Menu) */
+
+/* 1. Warna Default Putih */
+.navbar-toggler-icon {
+    /* Mengubah warna garis di dalam ikon menjadi putih */
+    /* Filter invert(1) akan mengubah warna gelap menjadi putih/terang */
+    filter: invert(1);
+}
+
+/* 2. Warna Saat Di-hover/Di-fokus/Di-tekan (Hijau Neon) */
+.navbar-toggler:hover .navbar-toggler-icon,
+.navbar-toggler:focus .navbar-toggler-icon {
+    /* Mengubah warna garis menjadi hijau neon */
+    /* Karena filter invert(1) sudah diterapkan, kita perlu menyesuaikan filter untuk neon */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2339FF14' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Catatan: #39FF14 adalah kode heksadesimal untuk var(--neon-green) */
+    filter: none; /* Menonaktifkan filter invert jika perlu, dan mengandalkan background-image */
+}
+
+/* KODE ALTERNATIF (Lebih Sederhana, jika menggunakan versi Bootstrap yang lebih lama) */
+/* Coba gunakan ini jika kode di atas tidak bekerja: */
+/*
+.navbar-toggler {
+    border-color: #ffffff !important; 
+}
+.navbar-toggler:hover {
+    border-color: var(--neon-green) !important;
+}
+.navbar-toggler i { 
+    color: #ffffff !important;
+}
+.navbar-toggler:hover i { 
+    color: var(--neon-green) !important;
+}
+*/
+.navbar {
+    background-color: #20272b !important; /* Navbar Hitam Gelap */
+    border-bottom: 2px solid var(--neon-green); /* Garis bawah hijau neon */
+}
+
+/* Memastikan teks dan link Nav putih */
+.navbar .brand-text, 
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Link aktif hijau neon */
+.navbar .nav-link.active {
+    color: var(--neon-green) !important;
+    border-bottom: 3px solid var(--neon-green);
+    padding-bottom: 5px;
+    background-color: transparent !important; 
+}
+
+/* Tombol Mode Toggle */
+.toggleModeBtn {
+    background-color: #2a2a2a; 
+    color: var(--neon-green); 
+    border: 1px solid var(--neon-green);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* --- Hero Section --- */
+/* Tombol Join Now */
+.btn-success {
+    background-color: var(--neon-green) !important; 
+    border-color: var(--neon-green) !important;
+    color: #0a0a0a !important; /* Teks tombol hitam agar kontras */
+    border-radius: 0;
+}
+/* Selektor untuk Keterangan di Bawah Judul Utama Discography */
+.container.my-5 > p.text-muted {
+    /* Mengubah warna teks dari abu-abu (text-muted) menjadi putih */
+    color: white !important;
+}
+
+/* --- Features/Card Section --- */
+.custom-card {
+    background-color: #1a1a1a; /* Latar belakang kartu hitam gelap */
+    color: #ffffff; /* Teks kartu putih */
+    border: 1px solid var(--neon-green); /* Border hijau neon */
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3); /* Sedikit bayangan neon */
+    border-radius: 5px; 
+    text-align: center;
+    padding: 15px;
+}
+.custom-card .card-title {
+    color: var(--neon-green); /* Judul kartu hijau neon */
+}
+.price-new { font-size: 1.5rem; font-weight: bold; color: var(--neon-green); }
+/* KODE BARU/EDITED UNTUK MENGUBAH NAMA UNIT MENJADI PUTIH */
+.custom-card .card-body .card-text.text-muted {
+    /* Mengganti warna dari text-muted (abu-abu) menjadi putih */
+    color: white !important; 
+    /* "!important" digunakan untuk memastikan warna ini menimpa kelas Bootstrap 'text-muted' */
+}
+
+/* --- FAQ (Accordion) --- */
+.accordion-item { 
+    border: 1px solid var(--neon-green); 
+    margin-bottom: 10px; 
+    border-radius: 5px !important; 
+    background-color: #1a1a1a; 
+}
+.accordion-button { 
+    font-weight: bold; 
+    color: #ffffff; 
+    background-color: #2a2a2a; 
+    border-radius: 5px !important; 
+}
+.accordion-button:not(.collapsed) { 
+    color: var(--neon-green); 
+    background-color: #0a0a0a; 
+    border-bottom: 1px solid var(--neon-green); 
+}
+/* Gaya untuk ikon '+' */
+.accordion-button .fa-plus { font-size: 0.8rem; color: var(--neon-green); }
+.accordion-button:not(.collapsed) .fa-plus { 
+    content: "\f068"; 
+    color: var(--neon-green); 
+    transform: rotate(45deg); 
+}
+
+
+/* --- Contact Form & Input Fields --- */
+.form-contact {
+    background-color: #1a1a1a !important; 
+    border-radius: 5px !important;
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    padding: 20px;
+    color: #ffffff; 
+}
+.form-control {
+    background-color: #0a0a0a; 
+    color: #ffffff; 
+    border: 1px solid var(--neon-green); 
+    border-radius: 3px;
+}
+.form-control::placeholder {
+    color: #aaaaaa; 
+}
+
+/* Tombol Kirim */
+.btn-send {
+    background-color: var(--neon-green) !important; 
+    border-color: var(--neon-green) !important;
+    color: #0a0a0a !important; 
+    border-radius: 0;
+    font-weight: bold;
+}
+
+/* Dropdown (Select) */
+.form-select {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    border: 1px solid var(--neon-green);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2339ff14' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); /* Panah Hijau */
+}
+
+/* Kotak Pembungkus Radio & Checkbox (Custom Options - Fix & Grow) */
+.custom-option {
+    border: 1px solid #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    min-width: 100px; /* Ukuran minimal */
+    
+    /* FIX: Gaya untuk Flex Grow dan Centering */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+}
+
+/* Efek Hover untuk Opsi Form */
+.custom-option:hover {
+    border-color: var(--neon-green);
+    background-color: #222;
+}
+
+/* Radio & Checkbox Input Styling */
+.form-check-input {
+    background-color: #0a0a0a;
+    border: 1px solid var(--neon-green);
+}
+
+/* Saat dicentang */
+.form-check-input:checked {
+    background-color: var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+/* Mengubah warna centang menjadi hitam */
+.form-check-input:checked[type=checkbox] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+.form-check-input:checked[type=radio] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23000'/%3e%3c/svg%3e");
+}
+
+
+/* --- FIXED TOP ALERT (SUCCESS BANNER) --- */
+.fixed-top-alert {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; 
+    padding: 15px;
+    text-align: center;
+    
+    /* Styling Neon yang Konsisten */
+    background-color: #0a0a0a; 
+    border-bottom: 3px solid var(--neon-green);
+    color: var(--neon-green);
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.1);
+}
+
+/* Mengubah Alert Sukses jadi Tema Neon saat diletakkan di dalam konten */
+.alert-success {
+    background-color: #0a0a0a;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+
+/* --- Table (Menu 1 / Wireframe 4) --- */
+.table thead th {
+    background-color: var(--neon-green) !important;
+    /* Ubah warna teks di header menjadi hitam agar kontras */
+    color: #000000 !important; 
+    font-weight: bold;
+}
+.table {
+    border: 1px solid var(--neon-green);
+    /* DIHAPUS: color: #000000; - Karena membuat teks hitam */
+}
+
+/* KODE BARU: Memaksa semua teks di dalam tabel menjadi putih */
+.table th,
+.table td {
+    color: #ffffff !important; 
+}
+
+.table-dark, .table-hover, .table-striped {
+    background-color: transparent !important;
+}
+
+/* Baris Ganjil (lebih gelap) */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #2e2e2e51 !important; 
+}
+
+/* Baris Genap (hitam pekat) */
+.table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: #0a0a0a !important; 
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0a0a0a !important; 
+    color: #ffffff;
+    border-top: 2px solid var(--neon-green); 
+    box-shadow: 0 -5px 10px rgba(57, 255, 20, 0.3); 
+}
+
+/* Logo di Footer agar muncul */
+#footer img {
+    display: inline-block; 
+    width: 60px; 
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 15px; 
+    border: 2px solid var(--neon-green); 
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5); 
+}
+
+/* Teks link di footer juga putih */
+#footer .list-unstyled a {
+    color: #ffffff !important;
+}
+
+
+/* --- Modal --- */
+.modal-content {
+    border-radius: 5px;
+    background-color: #1a1a1a !important; 
+    color: #ffffff !important;
+    border: 1px solid var(--neon-green);
+}
+.modal-title {
+    color: var(--neon-green) !important;
+}
+
+.modal-body .data-container {
+    background-color: #0a0a0a !important; 
+    padding: 15px;
+    border: 1px dashed var(--neon-green); 
+}
+
+.btn-yes {
+    background-color: var(--neon-green) !important; 
+    border-color: var(--neon-green) !important;
+    color: #0a0a0a !important; 
+    border-radius: 0;
+}
+
+.btn-no {
+    background-color: #dc3545 !important; 
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+    border-radius: 0;
+}
+.lead.text-muted {
+    color: rgb(0, 255, 30) !important; 
+}
